@@ -39,7 +39,7 @@ namespace EmployeePayroll
                 Console.WriteLine("Day {0} daily employee hours {1} total employee hours {2}",totalWorkingDay,empHrs,totalEmpHrs);
             }
             int empWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Total Employee wage is "+totalEmpHrs);
+            Console.WriteLine("Total Employee wage is "+empWage);
         }
     }
 }
