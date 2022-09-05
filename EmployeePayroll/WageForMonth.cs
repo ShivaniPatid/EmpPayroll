@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EmployeePayroll
 {
@@ -10,10 +14,10 @@ namespace EmployeePayroll
             int empWage = 0;
             int totalEmpWage = 0;
             const int EMP_RATE_PER_HOUR = 20;
-            for(int day = 1; day <= 20; day++)
+            for (int day = 1; day <= 20; day++)
             {
                 Random random = new Random();
-                int empCheck=random.Next(1,2);
+                int empCheck = random.Next(1, 2);
 
                 switch (empCheck)
                 {
@@ -29,10 +33,9 @@ namespace EmployeePayroll
                 }
                 empWage = empHrs * EMP_RATE_PER_HOUR;
                 totalEmpWage += empWage;
-                Console.WriteLine("daily employee wage is {0} total emp wage {1}",empWage,totalEmpWage);
+                Console.WriteLine("daily employee wage is {0} total emp wage {1}", empWage, totalEmpWage);
             }
             Console.WriteLine("Total Employee wage is " + totalEmpWage); ;
         }
-
     }
 }
