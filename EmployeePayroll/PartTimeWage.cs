@@ -1,5 +1,8 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EmployeePayroll
 {
@@ -11,8 +14,8 @@ namespace EmployeePayroll
             const int IS_PART_TIME = 2;
             const int EMP_RATE_PER_HOUR = 20;
             int empHrs = 0;
-            Random random=new Random();
-            int empCheck = random.Next(1,3);
+            Random random = new Random();
+            int empCheck = random.Next(1, 3);
 
             if (empCheck == IS_FULL_TIME)
             {
@@ -30,7 +33,8 @@ namespace EmployeePayroll
                 Console.WriteLine("Employee is absent");
             }
             int empWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Employee daily wage including the part time : "+empWage);
-        }   
+            Console.WriteLine("Employee daily wage including the part time : " + empWage);
+        }
     }
+
 }
