@@ -7,7 +7,7 @@ namespace EmployeePayroll
         static void Main(string[] args)
         {
             Console.WriteLine( "Welcome to employee Wage");
-            Console.WriteLine("Choose Option\n 1. Check absent present\n 2. Daily emp wage\n 3. part time wage\n 4. check part time using switch case\n 5. calculate Wage For Month\n 6. Calculate wage for month using while loop\n 7. Compute Employee Wage\n 8. Employee wage for multiple company\n 9.Compute Employee Wage and Save Total Wage for each Company\n 10. Ability to manage Employee Wage of multiple companies\n 11. Employee Wage for Multiple Company using Interface approach");            
+            Console.WriteLine("Choose Option\n 1. Check absent present\n 2. Daily emp wage\n 3. part time wage\n 4. check part time using switch case\n 5. calculate Wage For Month\n 6. Calculate wage for month using while loop\n 7. Compute Employee Wage\n 8. Employee wage for multiple company\n 9.Compute Employee Wage and Save Total Wage for each Company\n 10. Ability to manage Employee Wage of multiple companies\n 11. Employee Wage for Multiple Company using Interface approach\n 13. Daily and total wage");            
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -37,8 +37,8 @@ namespace EmployeePayroll
                     WageForMultipleCompany.ComputeWaageForMultipleCompany("Reliance", 20, 20, 100);
                     break;
                 case 9:
-                    EmpWageBuilderObject dmart = new EmpWageBuilderObject("D-Mart", 20, 20, 100);
-                    EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance", 20, 20, 100);
+                    EmpWageBuilderObject dmart = new EmpWageBuilderObject("D-Mart", 20, 2, 10);
+                    EmpWageBuilderObject reliance = new EmpWageBuilderObject("Reliance", 20, 4, 15);
                     dmart.ComputeEmployeeWage();
                     Console.WriteLine(dmart.ToString());
                     reliance.ComputeEmployeeWage();
@@ -55,6 +55,12 @@ namespace EmployeePayroll
                     empWageBuilder.AddCompanyEmpWage("D-Mart", 20, 20, 100);
                     empWageBuilder.AddCompanyEmpWage("Reliance", 20, 20, 100);
                     empWageBuilder.ComputeEmpWage();
+                    break;
+                case 13:
+                    DailyAndTotalWage dailyAndTotalWage1 = new DailyAndTotalWage("D-Mart",20 ,20 ,100);
+                    DailyAndTotalWage dailyAndTotalWage2 = new DailyAndTotalWage("Reliance", 20, 20, 100);
+                    dailyAndTotalWage1.ComputeEmployeeWage();
+                    dailyAndTotalWage2.ComputeEmployeeWage();
                     break;
                 default:
                     Console.WriteLine("Entered Wrong choice");
